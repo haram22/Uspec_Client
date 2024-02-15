@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0D4105F42B7B84F40039CDB6 /* UIFont+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4105F32B7B84F40039CDB6 /* UIFont+.swift */; };
+		2102541C2B7C9CF7009370E5 /* CRUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2102541B2B7C9CF7009370E5 /* CRUD.swift */; };
 		21B21B672B722444008FFDCB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B21B662B722444008FFDCB /* AppDelegate.swift */; };
 		21B21B692B722444008FFDCB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B21B682B722444008FFDCB /* SceneDelegate.swift */; };
 		21B21B6B2B722444008FFDCB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B21B6A2B722444008FFDCB /* ViewController.swift */; };
@@ -42,6 +43,7 @@
 
 /* Begin PBXFileReference section */
 		0D4105F32B7B84F40039CDB6 /* UIFont+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+.swift"; sourceTree = "<group>"; };
+		2102541B2B7C9CF7009370E5 /* CRUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRUD.swift; sourceTree = "<group>"; };
 		21B21B632B722444008FFDCB /* Uspec_Client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Uspec_Client.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21B21B662B722444008FFDCB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		21B21B682B722444008FFDCB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -100,6 +102,14 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		2102541A2B7C9CB9009370E5 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				2102541B2B7C9CF7009370E5 /* CRUD.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
 		21B21B5A2B722444008FFDCB = {
 			isa = PBXGroup;
 			children = (
@@ -137,6 +147,7 @@
 		21B21B7E2B738F93008FFDCB /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				2102541A2B7C9CB9009370E5 /* API */,
 				21B21BA62B779FB6008FFDCB /* Model */,
 				21B21BA12B75FAD6008FFDCB /* Common */,
 				21B21B852B75F7B8008FFDCB /* Scene */,
@@ -419,6 +430,7 @@
 				21C100312B7BE71B00BED0A8 /* StatusInfoViewController.swift in Sources */,
 				21B21BD12B7BCDF4008FFDCB /* UniversityViewController.swift in Sources */,
 				21B21B9B2B75FA90008FFDCB /* DashboardViewController.swift in Sources */,
+				2102541C2B7C9CF7009370E5 /* CRUD.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -55,6 +55,7 @@ class StatusInfoViewController: ProfileViewController {
         statusSection()
         scoreSection()
         setNextButton()
+        hideKeyboardWhenTappedAround()터
     }
     
     private func setUi() {
@@ -71,7 +72,7 @@ class StatusInfoViewController: ProfileViewController {
         }
         view.addSubview(scoreLabel)
         scoreLabel.snp.makeConstraints{ make in
-            make.top.equalTo(ageLabel.snp.bottom).offset(84)
+            make.top.equalTo(ageLabel.snp.bottom).offset(100)
             make.left.equalTo(16)
         }
     }
@@ -103,6 +104,7 @@ class StatusInfoViewController: ProfileViewController {
         agefieldLabel.textColor = .textBlack
         ageField.addSubview(agefieldLabel)
         ageField.rightView = agefieldLabel
+        ageField.keyboardType = .numberPad
         ageField.rightViewMode = .always
         ageField.addLeftPadding(width: 75)
         
@@ -111,6 +113,7 @@ class StatusInfoViewController: ProfileViewController {
         semesterLabel.textColor = .textBlack
         semesterField.addSubview(semesterLabel)
         semesterField.rightView = semesterLabel
+        semesterField.keyboardType = .numberPad
         semesterField.rightViewMode = .always
         semesterField.addLeftPadding(width: 70)
         
@@ -149,7 +152,7 @@ class StatusInfoViewController: ProfileViewController {
         if let unSelectedImage = UIImage(named: "unSelected")?.resized(toWidth: 20) {
             score4_3.icon = unSelectedImage
         }
-
+        
         if let selectedImage = UIImage(named: "selected")?.resized(toWidth: 20) {
             score4_3.iconSelected = selectedImage
         }
@@ -166,7 +169,6 @@ class StatusInfoViewController: ProfileViewController {
         if let unSelectedImage = UIImage(named: "unSelected")?.resized(toWidth: 20) {
             score4_5.icon = unSelectedImage
         }
-
         if let selectedImage = UIImage(named: "selected")?.resized(toWidth: 20) {
             score4_5.iconSelected = selectedImage
         }
@@ -184,13 +186,13 @@ class StatusInfoViewController: ProfileViewController {
         
         view.addSubview(scoreField)
         scoreField.snp.makeConstraints{ make in
-            make.top.equalTo(scoreRadioStackView.snp.bottom).offset(9)
+            make.top.equalTo(scoreRadioStackView.snp.bottom).offset(13)
             make.left.equalTo(16)
             make.right.equalTo(-16)
             make.height.equalTo(48)
         }
         
-    
+        
         isScoreVisible.iconSize = 20
         isScoreVisible.setTitle("학점 비공개", for: .normal)
         isScoreVisible.setTitleColor(.textBlack, for: .normal)
@@ -203,22 +205,21 @@ class StatusInfoViewController: ProfileViewController {
         if let unSelectedImage = UIImage(named: "unSelected")?.resized(toWidth: 20) {
             isScoreVisible.icon = unSelectedImage
         }
-
+        
         if let selectedImage = UIImage(named: "selected")?.resized(toWidth: 20) {
             isScoreVisible.iconSelected = selectedImage
         }
         isScoreVisible.snp.makeConstraints{ make in
-            make.top.equalTo(scoreField.snp.bottom).offset(8)
+            make.top.equalTo(scoreField.snp.bottom).offset(12)
             make.right.equalTo(-16)
             make.width.equalTo(120)
         }
     }
     
     @objc func isScoreVisibleTapped(_ sender: DLRadioButton) {
-            // 선택 상태를 토글하고 UI 업데이트
-            isScoreVisibleSelected.toggle()
-            sender.isSelected = isScoreVisibleSelected
-        }
+        isScoreVisibleSelected.toggle()
+        sender.isSelected = isScoreVisibleSelected
+    }
     
     @objc func btnTouch(_ sender:DLRadioButton) {
         print(sender.currentTitle!)

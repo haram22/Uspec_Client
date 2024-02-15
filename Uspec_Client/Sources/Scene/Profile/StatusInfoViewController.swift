@@ -55,7 +55,7 @@ class StatusInfoViewController: ProfileViewController {
         statusSection()
         scoreSection()
         setNextButton()
-        hideKeyboardWhenTappedAround()터
+        hideKeyboardWhenTappedAround()
     }
     
     private func setUi() {

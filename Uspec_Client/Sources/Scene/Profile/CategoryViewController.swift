@@ -131,10 +131,10 @@ class CategoryViewController: ProfileViewController {
             if let age = Int(ageString), let semester = Int(semesterString) {
                 APICallers.shared.makePostRequest(with: nickName, university: university, age: age, semester: semester, isGraduated: isGraduated, score: score, major: major, isThree: isThree, isGradeOpen: isGradeOpen, path: path)
             } else {
-                print("Error: Unable to convert age or semester to Int.")
+                print("Error: Unable to convert age or semester to Int. ")
             }
         } else {
-            print("Error: Unable to retrieve some UserDefaults values.")
+            print("Error: Unable to retrieve some UserDefaults values. ")
         }
         
         let profileDoneVC = ProfileDoneViewController(currentStep: .step0)
